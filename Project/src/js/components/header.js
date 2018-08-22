@@ -6,6 +6,7 @@ const defaults = {
   activeClass: 'active'
 };
 
+// import 해주기 위해 export 해준다.
 export default class Header {
   constructor(options) {
     const settings = Object.assign({}, defaults, options);
@@ -35,4 +36,3 @@ export default class Header {
     }
   }
 }
-

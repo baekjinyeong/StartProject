@@ -6,24 +6,43 @@
 
 html, body {
   position: relative;
-  height: 100%;
 }
 body {
   background: #eee;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
-  color:#000;
-  margin: 0;
   padding: 0;
 }
 
 // swiper
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
 .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background: #fff;
 }
-
 // header
 .header {
   position: fixed;
@@ -32,10 +51,56 @@ body {
   right: 0;
   z-index: 100;
 }
+.header_block {
+  position: relative;
+  width: 100%;
+  height: 90px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  .header__logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+    > a {
+      display: block;
+      padding: 13px 70px 7px;
+      cursor: pointer;
+    }
+  }
+  .header__layer-button {
+    position: absolute;
+    padding: 0 27px;
+    width: 68px;
+    height: 100%;
+    top: 0;
+    left: 241px;
+    background: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    .icon-down-arrow {
+      display: block;
+      width: 15px;
+      height: 9px;
+      background: url(../img/icon/arrow_down_15x9.png) no-repeat 0 0;
+    }
+  }
+}
+.header__gnb {
+  position: absolute;
+  top: 35px;
+  left: 308px;
+}
+.header__gnb-list {
+  display: flex;
+  padding: 0 150px;
+  width: 987px;
+}
 .header__gnb-item {
+  flex: 1;
   color: #fff;
   font-size: 16px;
   font-weight: bold;
+  text-align: center;
 }
 
 // main
@@ -43,11 +108,13 @@ body {
   min-width: 1080px;
   width: 100%;
   height: 100%;
-  background: black;
   .main-visual {
     .slide-img {
-      width: 1920px;
       height: 960px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }
