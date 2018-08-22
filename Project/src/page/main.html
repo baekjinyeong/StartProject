@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="../../css/style.css" rel="stylesheet" />
+
+  <title>Project Name</title>
+  <style>
+      html, body {
+        position: relative;
+        height: 100%;
+      }
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+      }
+      .swiper-container {
+        width: 100%;
+        height: 100%;
+      }
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+  
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+    </style>
+</head>
+
+<body>
+
+  <header class="header">
+    @@include('_include/header.html')
+  </header>
+
+  <main class="main">
+    <div class="main-visual">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="slide-img">
+              <img src="../img/data/portal_main-visual_01.jpg" alt="Neon Dream FW18">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-img">
+              <img src="../img/data/portal_main-visual_02.jpg" alt="Aucust Cover Story">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-img">
+              <img src="../img/data/portal_main-visual_03.jpg" alt="It's New Galleria">
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </main>
+  <!-- Swiper JS -->
+  <!-- <script src="../js/swiper/swiper.min.js"></script> -->
+  <script src="../js/main.js"></script>
+</body>
+</html>
