@@ -4,8 +4,8 @@ import 'babel-polyfill'; // es6 변환을 위해 꼭 적어주어야 한다. (�
 // 3rd-party dependencies
 import $ from 'jquery';
 import Swiper from 'swiper'; // npm install swiper 후 package.json에 저장된 파일을 불러온다.
+import Header from './components/header';
 
-window.$ = $;
 window.jQuery = $;
 
 (function() {
