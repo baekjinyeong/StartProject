@@ -38,57 +38,90 @@ import $ from 'jquery';
 
 // import 해주기 위해 export 해준다.
 export default function options() {
-  var btnNavOpen = $('.header__layer-button'),
-    dimd = $('.dimd'),
-    NavLayer = $('.side-navigation');
+  var header = $('.header');
+  var doc = $(document);
+  var win = $(window);
+  var headerContainer = header.find('.header__block');
+  var navContainer = $('.side-navigation');
+  var dimd = $('.dimd');
+
+  header
+    .on('click', '.header-layer-button', () => {
+      open();
+    })
+    .on('click', '.header-search-button', () => {
+      
+    });
+
+  doc
+    .on('click', '.button-navigation-close', () => {
+      close();
+    })
+    .on('click', '.dimd', () => {
+      dimdClose();
+    });
+
+  // scroll header
+  win.scroll(function() {
+    var top = $(document).scrollTop();
+
+    if (top > 0) {
+      headerContainer.addClass('is-active');
+    } else {
+      headerContainer.removeClass('is-active');
+    }
+  });
 
   // open
-  const open = function(){
-    btnNavOpen.on('click', function(e) {
-      NavLayer.addClass('is-active');
-      dimd
-        .addClass('is-open')
-        .stop()
-        .animate({
-            opacity: 0.6
-          },
-          300
-        );
-    });
-  }
-  open();
+  const open = function() {
+    navContainer.addClass('is-active');
+    dimd
+      .addClass('is-open')
+      .stop()
+      .animate({
+          opacity: 0.6
+        },
+        300
+      );
+  };
 
   // close
   const close = function(){
-    var btnNavClose = $('.button-navigation-close');
-    btnNavClose.on('click', function(e) {
-      NavLayer.removeClass('is-active');
-      dimd.stop().animate({
-          opacity: 0
-        },
-        300,
-        function(){
-          dimd.removeClass('is-open');
-        }
-      );
-    });
+    navContainer.removeClass('is-active');
+    dimd.stop().animate({
+        opacity: 0
+      },
+      300,
+      function(){
+        dimd.removeClass('is-open');
+      }
+    );
   };
-  close();
 
   // dimd close
   const dimdClose = function() {
-    dimd.on('click', function(){
-      NavLayer.removeClass('is-active');
-      dimd.stop().animate({
-          opacity: 0
-        },
-        300,
-        function(){
-          dimd.removeClass('is-open');
-        }
-      );
+    navContainer.removeClass('is-active');
+    dimd.stop().animate({
+        opacity: 0
+      },
+      300,
+      function(){
+        dimd.removeClass('is-open');
+      }
+    );
+  };
+
+  // toggle header
+  const overHeader = function(){
+    headerContainer.on('mouseenter', function(){
+      headerContainer.addClass('is-active');
+      $('.header-navigation-block').addClass('is-active');
     });
-  }
-  dimdClose();
+    headerContainer.on('mouseleave', function(){
+      headerContainer.removeClass('is-active');
+      $('.header-navigation-block').removeClass('is-active');
+    });
+  };
+  overHeader();
 }
 options();

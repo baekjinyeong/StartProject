@@ -11,46 +11,57 @@
 </head>
 
 <body>
-  <div class="dimd"></div>
-  <header class="header">
-    @@include('_include/header.html')
-  </header>
-
-  <!-- side navigation -->
-  <div class="side-navigation">
-    <div class="side-navigation__header">
-      <button type="button" class="button-navigation-close"><span class="blind">사이드네비게이션 닫기</span></button>
-    </div>
-    <div class="side-navigation__content"></div>
-  </div>
-  <!-- //side navigation -->
-
-  <main class="main">
-    <div class="main-visual">
-      <div class="swiper-container swiper-container-horizontal">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="slide-img">
-              <img src="../img/data/portal_main-visual_01.jpg" alt="Neon Dream FW18">
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="slide-img">
-              <img src="../img/data/portal_main-visual_02.jpg" alt="Aucust Cover Story">
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="slide-img">
-              <img src="../img/data/portal_main-visual_03.jpg" alt="It's New Galleria">
-            </div>
-          </div>
-        </div>
-        
-        <div class="swiper-pagination"></div>
-        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+  <div class="wrap">
+    <div class="dimd"></div>
+    <header class="header">
+      @@include('_include/header.html')
+    </header>
+  
+    <!-- side navigation -->
+    <div class="side-navigation">
+      <div class="side-navigation__header">
+        <button type="button" class="button-navigation-close"><span class="blind">사이드네비게이션 닫기</span></button>
       </div>
+      <div class="side-navigation__content"></div>
     </div>
-  </main>
+    <!-- //side navigation -->
+  
+    <main class="main">
+      <!-- main visual -->
+      <div class="main__visual">
+        <div class="swiper-container swiper-container-horizontal">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slide-img">
+                <img src="../img/data/portal_main-visual_01.jpg" alt="Neon Dream FW18">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-img">
+                <img src="../img/data/portal_main-visual_02.jpg" alt="Aucust Cover Story">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-img">
+                <img src="../img/data/portal_main-visual_03.jpg" alt="It's New Galleria">
+              </div>
+            </div>
+          </div>
+          
+          <div class="swiper-pagination"></div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+      </div>
+      <!-- //main visual -->
+  
+      <!-- main content -->
+      <div class="main__content">
+  
+      </div>
+      <!-- //main content -->
+    </main>
+  </div>
+  
   <script src="../js/main.js"></script>
 </body>
 </html>
