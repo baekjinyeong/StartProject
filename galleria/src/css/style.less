@@ -211,32 +211,25 @@ body {
     visibility: hidden;
     position: absolute;
     margin-top: 91px;
-    padding-top: 50px;
+    padding: 50px 90px 0 390px;
     width: 100%;
     height: 226px;
     top: 0;
     left: 0;
     background: #fff;
-    text-align: center;
     opacity:0;
     transition: 200ms ease;
     .gnb-block-list {
-      position: relative;
       width: 803px;
       height: 154px;
-      top: 0;
-      left: 86px;
       background-position: 0 -174px;
     }
     .gnb-block-banner {
-      position: relative;
-      top: 0;
-      right: -160px;
+      margin-left: 72px;
       width: 493px;
       height: 152px;
       background-position: -299px -5px;
     }
-
   }
   // side navigation
   .side-navigation {
@@ -364,14 +357,37 @@ body {
 @media screen and (max-width: 1680px) {
   .header {
     .header-gnb-list {
-      padding-right: 470px;
+      padding-right: 400px;
     }
+    .header-gnb-block{
+      padding-left: 300px;
+      .gnb-block-list {
+        background-position: 0 -174px;
+      }
+      .gnb-block-banner {
+        margin-left: 100px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1400px) {
+  .header-gnb-list {
+    padding-left: 300px;
+  }
+  .gnb-block-banner {
+    visibility: hidden;
   }
 }
 @media screen and (max-width: 1280px) {
   .header {
     .header-gnb-list {
       padding: 0 406px 0 75px
+    }
+    .header-gnb-block{
+      padding-left: 235px;
+      .gnb-block-list {
+        background-position: 0 -174px;
+      }
     }
   }
 }
