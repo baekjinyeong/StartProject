@@ -13,6 +13,13 @@ window.jQuery = $;
 
   // swiper
   const swiper = new Swiper('.swiper-container', {
+    onSlideChangeStart : function(swiper){
+      var index = this.realIndex + 1;
+      var slideSubText = $('')
+      console.log(index);
+      // 현재 인덱스 값 찾아서 텍스트 효과 주기
+      $('.swiper-slide:eq(' + index + ')'.children('.main-visual-sub').addClass('show'));
+    },
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
@@ -20,7 +27,11 @@ window.jQuery = $;
       clickable: true
     },
     autoplay: {
-      delay: 3000
-    }
+      delay: 3000,
+      disableOnInteraction: false
+    },
+    speed: 1000,
+    loop: true,
+    parallax: true
   });
 })();
