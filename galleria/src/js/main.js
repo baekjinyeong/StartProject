@@ -1,3 +1,4 @@
+'use strict';
 // Polyfills
 import 'babel-polyfill'; // es6 변환을 위해 꼭 적어주어야 한다. (크롬 외 다른 브라우저 정상 작동 위해)
 
@@ -9,10 +10,22 @@ import Header from './components/header';
 window.jQuery = $;
 
 (function() {
-  'use strict';
+  const header = new Header();
 
   // swiper
   const mainSwiper = new Swiper('.swiper-container', {
+    on: {
+      slideChange: function(swiper) {
+        const index = this.realIndex;
+        const slideText = '.main-visual-sub';
+        const current = slideText + index;
+
+        if ($(current)) {
+          $(slideText).removeClass('show');
+          $(current).addClass('show');
+        }
+      }
+    },
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
@@ -25,20 +38,6 @@ window.jQuery = $;
     },
     speed: 1000,
     loop: true,
-    parallax: true,
-    on: {
-      slideChange: function(swiper) {
-        const index = this.realIndex;
-        const slideText = '.main-visual-sub';
-        const current = slideText + index;
-
-        console.log(index, current);
-
-        if ($(current)) {
-          $(slideText).removeClass('show');
-          $(current).addClass('show');
-        }
-      }
-    }
+    parallax: true
   });
 })();

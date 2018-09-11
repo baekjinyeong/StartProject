@@ -1,127 +1,75 @@
-// 3rd-party dependencies
 import $ from 'jquery';
 
 // const defaults = {
-//   rootSelector: '.header',
-//   activeClass: 'active'
+//   root: '.header',
+//   dimd: '.layer-dimd',
+//   menuLayer: '.header-menu-layer',
+//   menuSelector: '.header-layer-button',
+//   gnb: '.header-gnb',
+//   gnbBlock: '.header-gnb-block',
+//   search: '.header-search',
+//   active: 'active'
 // };
 
-
-// export default class Header {
-//   constructor(options) {
-//     const settings = Object.assign({}, defaults, options);
-//     const rootElement = document.querySelector(settings.rootSelector);
-
-//     Object.assign(this, { settings, rootElement });
-//   }
-
-//   open() {
-//     const { rootElement, settings } = this;
-//     rootElement.classList.add(settings.activeClass);
-//   }
-
-//   close() {
-//     const { rootElement, settings } = this;
-//     $(rootElement).removeClass(settings.activeClass);
-//   }
-
-//   toggle() {
-//     const { rootElement, settings } = this;
-
-//     if ($(rootElement).hasClass(settings.activeClass)) {
-//       $(rootElement).removeClass(settings.activeClass);
-//     } else {
-//       $(rootElement).addClass(settings.activeClass);
-//     }
-//   }
-// }
-
-// import 해주기 위해 export 해준다.
 export default function options() {
-  var header = $('.header');
   var doc = $(document);
-  var win = $(window);
-  var headerContainer = header.find('.header__block');
-  var navContainer = $('.side-navigation');
-  var dimd = $('.dimd');
+  var header = $('.header');
+  var headerGnb = $('.header-gnb-list');
+  var headerGnbItems = headerGnb.children('.header-gnb-item');
+  var headerGnbExpent = $('.header-gnb-block');
 
+  doc.on('click', '.search-layer-close', () => {
+    closeSearch();
+  })
   header
     .on('click', '.header-layer-button', () => {
-      open();
+      openMenu();
     })
-    .on('click', '.header-search-button', () => {
-      
+
+    .on('click', '.layer-close', () => {
+      closeMenu();
+    })
+
+    .on('click', '.header-search', () => {
+      openSearch();
     });
 
-  doc
-    .on('click', '.button-navigation-close', () => {
-      close();
-    })
-    .on('click', '.dimd', () => {
-      dimdClose();
-    });
-
-  // scroll header
-  win.scroll(function() {
-    var top = $(document).scrollTop();
-
-    if (top > 0) {
-      headerContainer.addClass('is-active');
-    } else {
-      headerContainer.removeClass('is-active');
-    }
+  headerGnbItems.on('mouseenter', () => {
+    openGnb();
   });
 
-  // open
-  const open = function() {
-    navContainer.addClass('is-active');
-    dimd
-      .addClass('is-open')
-      .stop()
-      .animate({
-          opacity: 0.6
-        },
-        300
-      );
+  headerGnbExpent.on('mouseleave', () => {
+    closeGnb();
+  });
+
+  //open menu gate
+  const openMenu = function() {
+    $('.header-menu-layer').addClass('active');
   };
 
-  // close
-  const close = function(){
-    navContainer.removeClass('is-active');
-    dimd.stop().animate({
-        opacity: 0
-      },
-      300,
-      function(){
-        dimd.removeClass('is-open');
-      }
-    );
+  // close menu gate
+  const closeMenu = function() {
+    $('.header-menu-layer').removeClass('active');
   };
 
-  // dimd close
-  const dimdClose = function() {
-    navContainer.removeClass('is-active');
-    dimd.stop().animate({
-        opacity: 0
-      },
-      300,
-      function(){
-        dimd.removeClass('is-open');
-      }
-    );
+  // open gnb
+  const openGnb = function(){
+    $('.header').addClass('active');
   };
 
-  // toggle header
-  const overHeader = function(){
-    headerContainer.on('mouseenter', function(){
-      headerContainer.addClass('is-active');
-      $('.header-navigation-block').addClass('is-active');
-    });
-    headerContainer.on('mouseleave', function(){
-      headerContainer.removeClass('is-active');
-      $('.header-navigation-block').removeClass('is-active');
-    });
+  // close gnb
+  const closeGnb = function(){
+    $('.header').removeClass('active');
   };
-  overHeader();
+
+  // open search
+  const openSearch = function(){
+    $('.header-search-layer').addClass('active');
+  };
+
+  // close search
+  const closeSearch = function(){
+    $('.header-search-layer').removeClass('active');
+  };
 }
 options();

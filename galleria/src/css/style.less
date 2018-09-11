@@ -72,14 +72,14 @@ body {
   left: 0;
   right: 0;
   z-index: 100;
-
+  transition: all 0.3s;
   .header__inner {
     position: relative;
     min-width: 1120px;
     width: 100%;
     height: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    transition: 200ms ease;
+    transition: all 0.5s ease;
     .header-logo {
       position: relative;
       float: left;
@@ -122,6 +122,7 @@ body {
       background: none;
       border-left: 1px solid rgba(255, 255, 255, 0.2);
       overflow: hidden;
+      z-index: 50;
       .header-button-search {
         position: absolute;
         width: 30px;
@@ -131,6 +132,9 @@ body {
         background-position: -13px -143px;
       }
     }
+  }
+  .header-gnb {
+    height: 100%;
   }
   .header-gnb-list {
     display: flex;
@@ -194,27 +198,30 @@ body {
   }
   // header gnb expend
   .header-gnb-block{
-    visibility: hidden;
     position: absolute;
     margin-top: 91px;
     padding: 50px 90px 0 390px;
     width: 100%;
-    height: 226px;
+    height: 0;
     top: 0;
     left: 0;
     background: #fff;
     opacity:0;
-    transition: 200ms ease;
+    transition: all 0.5s ease;
     .gnb-block-list {
       width: 803px;
       height: 154px;
       background-position: 0 -174px;
+      opacity: 0;
+      transition: opacity 0.8s;
     }
     .gnb-block-banner {
       margin-left: 72px;
       width: 493px;
       height: 152px;
       background-position: -299px -5px;
+      opacity: 0;
+      transition: opacity 0.8s;
     }
   }
   &.active {
@@ -261,8 +268,14 @@ body {
       }
     }
     .header-gnb-block {
-      visibility: visible;
-      opacity:1;
+      opacity: 1;
+      height: 226px;
+      .gnb-block-list {
+        opacity: 1;
+      }
+      .gnb-block-banner {
+        opacity: 1;
+      }
     }
   }
 
@@ -277,17 +290,30 @@ body {
     left: 0;
     opacity: 0;
     background: rgba(0, 0, 0, 0.7);
-    transition: opacity .3s;
+    visibility: hidden;
+    transition: all .5s ease-in-out;
   }
   // header menu
   .header-menu-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease-in-out;
     &.active {
+      opacity: 1;
+      visibility: visible;
       .layer-dimd  {
         opacity: 1;
+        visibility: visible;
       }
       .layer-menu-block {
-        left: 0;
         opacity: 1;
+        visibility: visible;
       }
     }
   }
@@ -299,9 +325,10 @@ body {
     background: #fff;
     flex-direction: column;
     z-index: 999;
-    left: -100%;
+    left: 0;
     opacity: 0;
-    transition: opacity .3s ease-in-out, left .3s ease-in-out;
+    visibility: hidden;
+    transition: all .5s ease-in-out;
     .layer-menu-header {
       position: relative;
       width: 100%;
@@ -376,7 +403,40 @@ body {
       }
     }
   }
-  
+  // header search 
+  .header-search-layer {
+    position: fixed;
+    padding: 120px 50px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    background: #fff;
+    z-index: 999;
+    overflow-y: auto;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s cubic-bezier(0.45, 0.05, 0.6, 1.13), visibility 0.3s linear;
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .search-layer-close {
+      position: fixed;
+      top: 0;
+      right: 16px;
+      width: 90px;
+      height: 90px;
+      background: none;
+      .sprite-common-close {
+        width: 20px;
+        height: 20px;
+        background-position: -12px -9px;
+      }
+    }
+  }
 }
 
 // main
@@ -400,7 +460,7 @@ body {
     transform: translate(-50%, -45%);
     transition: opacity 1.4s linear;
     .main-visual-title {
-      transition: transform 1.2s cubic-bezier(.17,.67,.6,.98), opacity 0.6s ease;
+      transition: transform 1s cubic-bezier(.17,.67,.6,.98), opacity 0.6s ease;
     }
     .main-visual-sub {
       opacity: 0;
@@ -466,7 +526,7 @@ body {
 @media screen and (max-width: 1280px) {
   .header {
     .header-gnb-list {
-      padding: 0 406px 0 75px
+      padding: 0 406px 0 75px;
     }
     .header-gnb-block{
       padding-left: 235px;
