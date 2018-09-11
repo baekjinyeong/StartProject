@@ -12,14 +12,7 @@ window.jQuery = $;
   'use strict';
 
   // swiper
-  const swiper = new Swiper('.swiper-container', {
-    onSlideChangeStart : function(swiper){
-      var index = this.realIndex + 1;
-      var slideSubText = $('')
-      console.log(index);
-      // 현재 인덱스 값 찾아서 텍스트 효과 주기
-      $('.swiper-slide:eq(' + index + ')'.children('.main-visual-sub').addClass('show'));
-    },
+  const mainSwiper = new Swiper('.swiper-container', {
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
@@ -32,6 +25,20 @@ window.jQuery = $;
     },
     speed: 1000,
     loop: true,
-    parallax: true
+    parallax: true,
+    on: {
+      slideChange: function(swiper) {
+        const index = this.realIndex;
+        const slideText = '.main-visual-sub';
+        const current = slideText + index;
+
+        console.log(index, current);
+
+        if ($(current)) {
+          $(slideText).removeClass('show');
+          $(current).addClass('show');
+        }
+      }
+    }
   });
 })();
