@@ -13,7 +13,7 @@ window.jQuery = $;
   const header = new Header();
 
   // swiper
-  const mainSwiper = new Swiper('.swiper-container', {
+  const mainSwiper = new Swiper('.swiper-main-visual.swiper-container', {
     on: {
       slideChange: function(swiper) {
         const index = this.realIndex;
@@ -39,5 +39,14 @@ window.jQuery = $;
     speed: 1000,
     loop: true,
     parallax: true
+  });
+
+  const oneclickSwiper = new Swiper('.swiper-oneclick-layer.swiper-container', {
+    slidesPerView: 3,
+    spaceBetween: 300,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    }
   });
 })();

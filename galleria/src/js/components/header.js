@@ -18,9 +18,19 @@ export default function options() {
   var headerGnbItems = headerGnb.children('.header-gnb-item');
   var headerGnbExpent = $('.header-gnb-block');
 
-  doc.on('click', '.search-layer-close', () => {
-    closeSearch();
-  })
+  doc
+    .on('click', '.search-layer-close', () => {
+      closeSearch();
+    })
+
+    .on('click', '.main-oneclick__button', () => {
+      openOneclick();
+    })
+
+    .on('click', '.oneclick-layer-close', () => {
+      closeOneclick();
+    });
+
   header
     .on('click', '.header-layer-button', () => {
       openMenu();
@@ -70,6 +80,16 @@ export default function options() {
   // close search
   const closeSearch = function(){
     $('.header-search-layer').removeClass('active');
+  };
+
+  // open oneclick
+  const openOneclick = function() {
+    $('.main-oneclick__layer').addClass('active');
+  };
+
+  // close oneclick
+  const closeOneclick = function() {
+    $('.main-oneclick__layer').removeClass('active');
   };
 }
 options();
