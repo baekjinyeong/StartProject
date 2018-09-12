@@ -13,6 +13,7 @@ import $ from 'jquery';
 
 export default function options() {
   var doc = $(document);
+  var win = $(window);
   var header = $('.header');
   var headerGnb = $('.header-gnb-list');
   var headerGnbItems = headerGnb.children('.header-gnb-item');
@@ -52,6 +53,16 @@ export default function options() {
     closeGnb();
   });
 
+  win.scroll(function() {
+    var top = $(document).scrollTop();
+
+    if (top > 0) {
+      header.addClass('move');
+    } else {
+      header.removeClass('move');
+    }
+  });
+
   //open menu gate
   const openMenu = function() {
     $('.header-menu-layer').addClass('active');
@@ -65,11 +76,13 @@ export default function options() {
   // open gnb
   const openGnb = function(){
     $('.header').addClass('active');
+    $('.header-gnb-block').addClass('active');
   };
 
   // close gnb
   const closeGnb = function(){
     $('.header').removeClass('active');
+    $('.header-gnb-block').removeClass('active');
   };
 
   // open search

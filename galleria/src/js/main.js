@@ -62,4 +62,20 @@ window.jQuery = $;
     spaceBetween: 300,
     centeredSlides: true
   });
+
+  // event swiper
+  var page = ['01', '02', '03', '04'];
+  const eventSwiper = new Swiper('.event > .swiper-container',{
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (page[index]) + '</span>';
+      }
+    },
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    }
+  });
 })();

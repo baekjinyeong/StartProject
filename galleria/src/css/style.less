@@ -226,7 +226,18 @@ body {
       opacity: 0;
       transition: opacity 0.8s;
     }
+    &.active {
+      opacity: 1;
+      height: 226px;
+      .gnb-block-list {
+        opacity: 1;
+      }
+      .gnb-block-banner {
+        opacity: 1;
+      }
+    }
   }
+  &.move,
   &.active {
     .header__inner {
       background: #fff;
@@ -268,16 +279,6 @@ body {
       }
       .gnb-menu7 {
         background-position-y: -36px;
-      }
-    }
-    .header-gnb-block {
-      opacity: 1;
-      height: 226px;
-      .gnb-block-list {
-        opacity: 1;
-      }
-      .gnb-block-banner {
-        opacity: 1;
       }
     }
   }
@@ -585,7 +586,11 @@ body {
       height: 80px;
       border-radius: 50%;
       background: rgba(255, 255, 255, 0.7);
+      box-shadow: 8px 7px 23px -11px rgba(0, 0, 0, 0.75);
       .sprite-common-oneclick {
+        position: absolute;
+        top: 20px;
+        left: 21px;
         width: 33px;
         height: 38px;
         background-position: -65px -10px;
@@ -647,6 +652,85 @@ body {
           opacity: 1;
         }
       }
+    }
+  }
+}
+
+// main content
+.main__content {
+  padding-top: 120px;
+}
+// event
+.event {
+  position: relative;
+  max-width: 1600px;
+  height: 1165px;
+  margin: 0 auto;
+  .swiper-container {
+    .swiper-slide {
+      position: relative;
+      .self-clear();
+    }
+  }
+  .swiper-event-main {
+    float: left;
+    .swiper-event-title {
+      position: absolute;
+      top: 116px;
+      left: 657px;
+      z-index: 2;
+    }
+    .swiper-event-description {
+      position: absolute;
+      top: 214px;
+      left: 731px;
+      z-index: 2;
+    }
+    .swiper-event-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+  }
+  .swiper-event-sub {
+    float: right;
+    .swiper-event-title {
+      position: absolute;
+      bottom: 56px;
+      right: 314px;
+    }
+    .swiper-event-description {
+      position: absolute;
+      bottom: 0px;
+      right: 228px;
+    }
+    .swiper-event-image {
+      position: absolute;
+      bottom: 107px;
+      right: 80px;
+    }
+  }
+  .swiper-pagination {
+    display: flex;
+    flex-direction: column;
+    left: 875px;
+    bottom: 320px;
+    .swiper-pagination-bullet {
+      font-family: 'Myriad Pro';
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 30px;
+      width: 22px;
+      height: 15px;
+    }
+    .swiper-pagination-bullet-active {
+      font-size: 60px;
+      position: absolute;
+      top: -200px;
+      left: -20px;
+      width: 54px;
+      height: 41px;;
     }
   }
 }
