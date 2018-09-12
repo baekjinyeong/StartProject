@@ -12,7 +12,7 @@ window.jQuery = $;
 (function() {
   const header = new Header();
 
-  // swiper
+  // main visual swiper
   const mainSwiper = new Swiper('.swiper-main-visual.swiper-container', {
     on: {
       slideChange: function(swiper) {
@@ -41,12 +41,26 @@ window.jQuery = $;
     parallax: true
   });
 
+  // oneclick swiper
   const oneclickSwiper = new Swiper('.swiper-oneclick-layer.swiper-container', {
+    on: {
+      init: function(){
+        $('.slide-img-button0').addClass('show');
+      },
+      slideChange: function(swiper) {
+        const index = this.realIndex;
+        const slideText = '.slide-img-button';
+        const current = slideText + index;
+
+        console.log(current);
+        if ($(current)) {
+          $(slideText).removeClass('show');
+          $(current).addClass('show');
+        }
+      }
+    },
     slidesPerView: 3,
     spaceBetween: 300,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    }
+    centeredSlides: true
   });
 })();

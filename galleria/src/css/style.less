@@ -532,7 +532,21 @@ body {
     .swiper-oneclick-layer {
       margin-top: 10px;
       .swiper-slide {
+        position: relative;
         width: 330px;
+      }
+      .slide-img-button {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -134px;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .7s;
+        &.show {
+          visibility: visible;
+          opacity: 1;
+        }
       }
     }
   }
