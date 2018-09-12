@@ -29,7 +29,6 @@ window.jQuery = $;
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
-      dynamicBullets: true,
       clickable: true
     },
     autoplay: {
