@@ -64,13 +64,13 @@ window.jQuery = $;
   });
 
   // event swiper
-  var page = ['01', '02', '03', '04'];
-  const eventSwiper = new Swiper('.event > .swiper-container',{
+  const eventSwiper = new Swiper('.swiper-main-event.swiper-container',{
     pagination: {
-      el: '.swiper-pagination',
+      el: '.swiper-pagination-event',
       clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + (page[index]) + '</span>';
+      renderBullet: function(index, className) {
+        var page = ['01', '02', '03'];
+        return '<span class="' + className + '">' + page[index] + '</span>';
       }
     },
     effect: 'fade',
