@@ -46,6 +46,7 @@ body {
   width: 12px;
   height: 12px;
   background: #fff;
+  color: #000 !important;
 }
 .wrap {
   width: 100%;
@@ -662,6 +663,9 @@ body {
 // main content
 .main__content {
   padding-top: 120px;
+  .text-effect {
+    animation: textEffect 2s;
+  }
 }
 // event
 .event {
@@ -708,6 +712,9 @@ body {
       z-index: 1;
       transform: scale(1.2);
       transition: all 1.5s;
+      &.image-effect {
+        animation: imageEffect 2s;
+      }
     }
     &.active {
       .swiper-event-title {
@@ -767,6 +774,9 @@ body {
       right: 80px;
       transform: scale(1.1);
       transition: all 1.5s;
+      &.image-effect {
+        animation: imageEffectSub 2s;
+      }
     }
     &.active {
       .swiper-event-title {
@@ -850,5 +860,36 @@ body {
         background-position: 0 -174px;
       }
     }
+  }
+}
+
+@keyframes textEffect {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes imageEffect {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes imageEffectSub {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
   }
 }
