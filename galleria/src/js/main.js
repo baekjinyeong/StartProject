@@ -6,11 +6,17 @@ import 'babel-polyfill'; // es6 변환을 위해 꼭 적어주어야 한다. (�
 import $ from 'jquery';
 import Swiper from 'swiper'; // npm install swiper 후 package.json에 저장된 파일을 불러온다.
 import Header from './components/header';
+import Scroll from './components/scroll';
 
 window.jQuery = $;
 
 (function() {
+  $('html, body')
+    .stop()
+    .animate({ scrollTop: 0 });
+
   const header = new Header();
+  const scroll = new Scroll();
 
   // main visual swiper
   const mainSwiper = new Swiper('.swiper-main-visual.swiper-container', {

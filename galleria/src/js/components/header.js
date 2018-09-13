@@ -1,16 +1,5 @@
 import $ from 'jquery';
 
-// const defaults = {
-//   root: '.header',
-//   dimd: '.layer-dimd',
-//   menuLayer: '.header-menu-layer',
-//   menuSelector: '.header-layer-button',
-//   gnb: '.header-gnb',
-//   gnbBlock: '.header-gnb-block',
-//   search: '.header-search',
-//   active: 'active'
-// };
-
 export default function options() {
   var doc = $(document);
   var win = $(window);
