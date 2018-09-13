@@ -713,7 +713,7 @@ body {
       transform: scale(1.2);
       transition: all 1.5s;
       &.image-effect {
-        animation: imageEffect 2s;
+        animation: imageEffectLeft 2s;
       }
     }
     &.active {
@@ -775,7 +775,7 @@ body {
       transform: scale(1.1);
       transition: all 1.5s;
       &.image-effect {
-        animation: imageEffectSub 2s;
+        animation: imageEffectRight 2s;
       }
     }
     &.active {
@@ -873,7 +873,7 @@ body {
     transform: translateY(0px);
   }
 }
-@keyframes imageEffect {
+@keyframes imageEffectLeft {
   from {
     opacity: 0;
     transform: translateX(-50px);
@@ -883,7 +883,7 @@ body {
     transform: translateX(0px);
   }
 }
-@keyframes imageEffectSub {
+@keyframes imageEffectRight {
   from {
     opacity: 0;
     transform: translateX(50px);

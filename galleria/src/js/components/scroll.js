@@ -2,7 +2,7 @@ import $ from 'jquery';
 
 export default function scroll() {
   // 마우스 휠 이벤트
-  $(window).on('mousewheel DOMMouseScroll', function(e){
+  $(window).on('mousewheel DOMMouseScroll', function(e) {
     e.preventDefault();
 
     var wheelDelta = e.originalEvent.wheelDelta,
@@ -59,5 +59,29 @@ export default function scroll() {
           );
       }
     }
-	}
+  }
+
+  // scoll animation
+  $(window).scroll(function() {
+    var windowH = $(window).height(),
+      scrollY = $(window).scrollTop();
+
+    $('p').each(function() {
+      var elPosition = $(this).offset().top;
+      if (scrollY > elPosition - windowH) {
+        $(this).addClass('text-effect');
+      } else {
+        $(this).removeClass('text-effect');
+      }
+    });
+
+    $('span').each(function() {
+      var elPosition = $(this).offset().top;
+      if (scrollY > elPosition - windowH) {
+        $(this).addClass('image-effect');
+      } else {
+        $(this).removeClass('image-effect');
+      }
+    });
+  });
 }

@@ -108,27 +108,4 @@ window.jQuery = $;
       crossFade: true
     }
   });
-
-  $(window).scroll(function() {
-    var windowH = $(window).height(),
-      scrollY = $(window).scrollTop();
-
-    $('p').each(function() {
-      var elPosition = $(this).offset().top;
-      if (scrollY > elPosition - windowH) {
-        $(this).addClass('text-effect');
-      } else {
-        $(this).removeClass('text-effect');
-      }
-    });
-
-    $('span').each(function() {
-      var elPosition = $(this).offset().top;
-      if (scrollY > elPosition - windowH) {
-        $(this).addClass('image-effect');
-      } else {
-        $(this).removeClass('image-effect');
-      }
-    });
-  });
 })();
