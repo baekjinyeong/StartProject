@@ -70,7 +70,30 @@ window.jQuery = $;
   });
 
   // event swiper
-  const eventSwiper = new Swiper('.swiper-main-event.swiper-container',{
+  const eventSwiper = new Swiper('.swiper-main-event.swiper-container', {
+    on: {
+      init: function(){
+        $('.swiper-event-main0').addClass('active');
+        $('.swiper-event-sub0').addClass('active');
+      },
+      slideChange: function() {
+        const index = this.realIndex;
+        const event = '.swiper-event-main';
+        const eventSub = '.swiper-event-sub';
+        const current = event + index;
+        const currentSub = eventSub + index;
+
+        console.log(current);
+        if ($(current)) {
+          $(event).removeClass('active');
+          $(current).addClass('active');
+        }
+        if ($(currentSub)) {
+          $(eventSub).removeClass('active');
+          $(currentSub).addClass('active');
+        }
+      }
+    },
     pagination: {
       el: '.swiper-pagination-event',
       clickable: true,

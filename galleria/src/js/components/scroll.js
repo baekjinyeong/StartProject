@@ -19,7 +19,7 @@ export default function scroll() {
   var listPage = $('.swiper-slide'),
     defalutCount = 0,
     scrollEvent = 0, // 스크롤 한번씩만 적용시키기 위한 변수 선언
-    height = $(window).height() / 2;
+    height = $(window).height() / 5;
   function direction(move) {
     if (move === 'down') {
       if (
@@ -35,7 +35,7 @@ export default function scroll() {
             {
               scrollTop: height * defalutCount
             },
-            400,
+            300,
             function() {
               scrollEvent = 0;
             }
@@ -52,7 +52,7 @@ export default function scroll() {
             {
               scrollTop: height * defalutCount
             },
-            400,
+            300,
             function() {
               scrollEvent = 0;
             }

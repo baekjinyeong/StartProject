@@ -680,28 +680,66 @@ body {
     .swiper-event-title {
       position: absolute;
       top: 116px;
-      left: 657px;
+      left: 500px;
       z-index: 2;
+      visibility: hidden;
+      opacity: 0;
+      transition: left 1s ease, opacity 2.5s ease, visibility 2s ease;
+      &.swiper-event-title3 {
+        left: 1000px;
+      }
     }
     .swiper-event-description {
       position: absolute;
       top: 214px;
-      left: 731px;
+      left: 900px;
       z-index: 2;
+      visibility: hidden;
+      opacity: 0;
+      transition: left 1s ease, opacity 2.5s ease, visibility 2s ease;
+      &.swiper-event-description3 {
+        left: 600px;
+      }
     }
     .swiper-event-image {
       position: absolute;
       top: 0;
       left: 0;
       z-index: 1;
+      transform: scale(1.2);
+      transition: all 1.5s;
+    }
+    &.active {
+      .swiper-event-title {
+        opacity: 1;
+        visibility: visible;
+        left: 657px;
+        &.swiper-event-title3 {
+          left: 850px;
+        }
+      }
+      .swiper-event-description {
+        opacity: 1;
+        visibility: visible;
+        left: 731px;
+        &.swiper-event-description3 {
+          left: 731px;
+        }
+      }
+      .swiper-event-image {
+        transform: scale(1);
+      }
     }
   }
   .swiper-event-sub {
     float: right;
     .swiper-event-title {
       position: absolute;
-      bottom: 56px;
+      bottom: 0;
       right: 314px;
+      opacity: 0;
+      visibility: hidden;
+      transition: bottom 1s ease, opacity 0.7s linear, visibility 0.7s linear;
       &.swiper-event-title2 {
         right: 257px;
       }
@@ -711,8 +749,11 @@ body {
     }
     .swiper-event-description {
       position: absolute;
-      bottom: 0px;
+      bottom: -50px;
       right: 228px;
+      opacity: 0;
+      visibility: hidden;
+      transition: bottom 1.4s ease, opacity 0.7s linear, visibility 0.7s linear;
       &.swiper-event-description2 {
         right: 179px;
       }
@@ -724,6 +765,23 @@ body {
       position: absolute;
       bottom: 107px;
       right: 80px;
+      transform: scale(1.1);
+      transition: all 1.5s;
+    }
+    &.active {
+      .swiper-event-title {
+        bottom: 56px;
+        opacity: 1;
+        visibility: visible;
+      }
+      .swiper-event-description {
+        bottom: 0px;
+        opacity: 1;
+        visibility: visible;
+      }
+      .swiper-event-image {
+        transform: scale(1);
+      }
     }
   }
   .swiper-pagination {
