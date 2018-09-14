@@ -7,10 +7,13 @@ import $ from 'jquery';
 import Swiper from 'swiper'; // npm install swiper 후 package.json에 저장된 파일을 불러온다.
 import Header from './components/header';
 import Scroll from './components/scroll';
+import AOS from 'aos';
 
 window.jQuery = $;
 
 (function() {
+  AOS.init();
+
   $('html').css('overflow', 'hidden');
   $('html, body')
     .stop()
