@@ -12,7 +12,9 @@ import AOS from 'aos';
 window.jQuery = $;
 
 (function() {
-  AOS.init();
+  AOS.init({
+    duration: 1200
+  });
 
   $('html').css('overflow', 'hidden');
   $('html, body')
