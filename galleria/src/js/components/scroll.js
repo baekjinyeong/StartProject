@@ -35,7 +35,7 @@ export default function scroll() {
             {
               scrollTop: height * defalutCount
             },
-            300,
+            250,
             function() {
               scrollEvent = 0;
             }
@@ -52,7 +52,7 @@ export default function scroll() {
             {
               scrollTop: height * defalutCount
             },
-            300,
+            250,
             function() {
               scrollEvent = 0;
             }

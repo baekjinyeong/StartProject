@@ -9,7 +9,7 @@ export default function options() {
   var headerGnbExpent = $('.header-gnb-block');
 
   doc
-    .on('click', '.search-layer-close', () => {
+    .on('click', '.header-search-layer-close', () => {
       closeSearch();
     })
 
@@ -54,22 +54,22 @@ export default function options() {
 
   //open menu gate
   const openMenu = function() {
-    $('.header-menu-layer').addClass('active');
+    $('.layer-menu').addClass('active');
   };
 
   // close menu gate
   const closeMenu = function() {
-    $('.header-menu-layer').removeClass('active');
+    $('.layer-menu').removeClass('active');
   };
 
   // open gnb
-  const openGnb = function(){
+  const openGnb = function() {
     $('.header').addClass('active');
     $('.header-gnb-block').addClass('active');
   };
 
   // close gnb
-  const closeGnb = function(){
+  const closeGnb = function() {
     $('.header').removeClass('active');
     $('.header-gnb-block').removeClass('active');
   };
@@ -77,6 +77,7 @@ export default function options() {
   // open search
   const openSearch = function(){
     $('.header-search-layer').addClass('active');
+    closeGnb();
   };
 
   // close search
