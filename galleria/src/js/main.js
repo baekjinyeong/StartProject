@@ -72,7 +72,8 @@ window.jQuery = $;
     },
     slidesPerView: 3,
     spaceBetween: 300,
-    centeredSlides: true
+    centeredSlides: true,
+    initialSlide: 3
   });
 
   // event swiper

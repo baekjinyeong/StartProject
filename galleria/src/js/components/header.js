@@ -55,6 +55,7 @@ export default function options() {
   //open menu gate
   const openMenu = function() {
     $('.layer-menu').addClass('active');
+    closeGnb();
   };
 
   // close menu gate
