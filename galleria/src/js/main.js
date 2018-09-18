@@ -13,6 +13,7 @@ window.jQuery = $;
 
 (function() {
   AOS.init({
+    easing: 'ease-out-back',
     duration: 1200
   });
 
