@@ -42,7 +42,7 @@ export default function options() {
     closeGnb();
   });
 
-  win.scroll(function() {
+  win.scroll(() => {
     var top = $(document).scrollTop();
 
     if (top > 0) {
@@ -53,46 +53,46 @@ export default function options() {
   });
 
   //open menu gate
-  const openMenu = function() {
+  const openMenu = () => {
     $('.layer-menu').addClass('active');
     closeGnb();
   };
 
   // close menu gate
-  const closeMenu = function() {
+  const closeMenu = () => {
     $('.layer-menu').removeClass('active');
   };
 
   // open gnb
-  const openGnb = function() {
+  const openGnb = () => {
     $('.header').addClass('active');
     $('.header-gnb-block').addClass('active');
   };
 
   // close gnb
-  const closeGnb = function() {
+  const closeGnb = () => {
     $('.header').removeClass('active');
     $('.header-gnb-block').removeClass('active');
   };
 
   // open search
-  const openSearch = function(){
+  const openSearch = () =>{
     $('.header-search-layer').addClass('active');
     closeGnb();
   };
 
   // close search
-  const closeSearch = function(){
+  const closeSearch = () =>{
     $('.header-search-layer').removeClass('active');
   };
 
   // open oneclick
-  const openOneclick = function() {
+  const openOneclick = () => {
     $('.main-oneclick__layer').addClass('active');
   };
 
   // close oneclick
-  const closeOneclick = function() {
+  const closeOneclick = () => {
     $('.main-oneclick__layer').removeClass('active');
   };
 }
