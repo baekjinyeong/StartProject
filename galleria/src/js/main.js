@@ -17,11 +17,9 @@ window.jQuery = $;
     duration: 1200
   });
 
-  $('html').css('overflow', 'hidden');
   $('html, body')
     .stop()
     .animate({ scrollTop: 0 });
-
   const header = new Header();
   const scroll = new Scroll();
 
@@ -80,7 +78,7 @@ window.jQuery = $;
   // event swiper
   const eventSwiper = new Swiper('.swiper-main-event.swiper-container', {
     on: {
-      init: function(){
+      init: function() {
         $('.swiper-event-main0').addClass('active');
         $('.swiper-event-sub0').addClass('active');
       },
@@ -106,11 +104,12 @@ window.jQuery = $;
       el: '.swiper-pagination-event',
       clickable: true,
       renderBullet: function(index, className) {
-        var page = ['01', '02', '03'];
+        var page = ['01', '02', '03', '04'];
         return '<span class="' + className + '">' + page[index] + '</span>';
       }
     },
     effect: 'fade',
+    autoHeight: true,
     fadeEffect: {
       crossFade: true
     }

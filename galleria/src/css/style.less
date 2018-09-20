@@ -204,47 +204,54 @@ body {
 .event {
   position: relative;
   max-width: 1600px;
-  height: 1165px;
-  margin: 0 auto;
+  padding: 0 9% 0 8%;
   .swiper-container {
     .swiper-slide {
       position: relative;
+      justify-content: flex-start;
+      align-items: stretch;
       .self-clear();
     }
   }
   .swiper-event-main {
-    float: left;
+    width: 49%;
+    .swiper-event-text {
+      text-align: center;
+    }
     .swiper-event-title {
       position: absolute;
-      top: 116px;
-      left: 500px;
+      margin-left: -140px;
+      top: 117px;
+      left: 40%;
       z-index: 2;
       visibility: hidden;
       opacity: 0;
-      transition: left 1s ease, opacity 2.5s ease, visibility 2s ease;
+      transition: left 2s ease, opacity 3s ease, visibility 3s ease;
       &.swiper-event-title3 {
-        left: 1000px;
+        left: 73%;
       }
     }
     .swiper-event-description {
       position: absolute;
+      margin-left: -65px;
       top: 214px;
-      left: 900px;
+      left: 60%;
       z-index: 2;
       visibility: hidden;
       opacity: 0;
-      transition: left 1s ease, opacity 2.5s ease, visibility 2s ease;
+      transition: left 2s ease, opacity 3s ease, visibility 3s ease;
       &.swiper-event-description3 {
-        left: 600px;
+        left: 41%;
       }
     }
     .swiper-event-image {
-      position: absolute;
-      top: 0;
-      left: 0;
+      display: block;
       z-index: 1;
       transform: scale(1.2);
       transition: all 1.5s;
+      img {
+        max-width: 100%;
+      }
       &.image-effect {
         animation: imageEffectLeft 2s;
       }
@@ -253,17 +260,17 @@ body {
       .swiper-event-title {
         opacity: 1;
         visibility: visible;
-        left: 657px;
+        left: 49.75%;
         &.swiper-event-title3 {
-          left: 850px;
+          left: 65%;
         }
       }
       .swiper-event-description {
         opacity: 1;
         visibility: visible;
-        left: 731px;
+        left: 49.75%;
         &.swiper-event-description3 {
-          left: 731px;
+          left: 51.75%;
         }
       }
       .swiper-event-image {
@@ -272,55 +279,50 @@ body {
     }
   }
   .swiper-event-sub {
-    float: right;
+    float: left;
+    width: 33.06%;
+    margin-left: 12.18%;
+    margin-top: 430px;
+    .swiper-event-text {
+      width: 33.06%;
+      margin-left: 12.18%;
+      text-align: left;
+    }
     .swiper-event-title {
-      position: absolute;
-      bottom: 0;
-      right: 314px;
+      margin-top: 16px;
+      margin-left: calc(55% - 50px);
       opacity: 0;
       visibility: hidden;
-      transition: bottom 1s ease, opacity 0.7s linear, visibility 0.7s linear;
-      &.swiper-event-title2 {
-        right: 257px;
-      }
-      &.swiper-event-title3 {
-        right: 323px;
-      }
+      transition: all 2s ease-in-out;
     }
     .swiper-event-description {
-      position: absolute;
-      bottom: -50px;
-      right: 228px;
+      margin-top: 20px;
+      margin-left: calc(55% - 50px);
       opacity: 0;
       visibility: hidden;
-      transition: bottom 1.4s ease, opacity 0.7s linear, visibility 0.7s linear;
-      &.swiper-event-description2 {
-        right: 179px;
-      }
-      &.swiper-event-description3 {
-        right: 238px;
-      }
+      transition: all 2s ease-in-out;
     }
     .swiper-event-image {
-      position: absolute;
-      bottom: 107px;
-      right: 80px;
+      display: block;
       transform: scale(1.1);
       transition: all 1.5s;
+      img {
+        max-width: 100%;
+      }
       &.image-effect {
         animation: imageEffectRight 2s;
       }
     }
     &.active {
       .swiper-event-title {
-        bottom: 56px;
         opacity: 1;
         visibility: visible;
+        margin-left: -57px;
       }
       .swiper-event-description {
-        bottom: 0px;
         opacity: 1;
         visibility: visible;
+        margin-left: -57px;
       }
       .swiper-event-image {
         transform: scale(1);
@@ -330,8 +332,8 @@ body {
   .swiper-pagination {
     display: flex;
     flex-direction: column;
-    left: 875px;
-    bottom: 320px;
+    left: 52.9%;
+    bottom: 22%;
     .swiper-pagination-bullet {
       font-family: 'Myriad Pro';
       font-weight: bold;
@@ -349,53 +351,6 @@ body {
       width: 54px;
       height: 41px;;
     }
-  }
-}
-
-@media screen and (max-width: 1680px) {
-  .main__content {
-    img {
-      width: 100%;
-    }
-  }
-}
-@media screen and (max-width: 1440px) {
-  .main__content {
-    .event {
-      img {
-        max-width: 80%;
-      }
-      .swiper-event-sub {
-        .swiper-event-image {
-          bottom: 300px;
-        }
-        &.active {
-          .swiper-event-title {
-            bottom: 257px;
-          }
-          .swiper-event-description {
-            bottom: 215px;
-          }
-        }
-      }
-      .swiper-pagination {
-        left: 768px;
-        bottom: 489px;
-        .swiper-pagination-bullet {
-          font-size: 16px;
-        }
-        .swiper-pagination-bullet-active {
-          top: -147px;
-          left: -11px;
-          font-size: 45px;
-        }
-      }
-    }
-  }
-}
-@media screen and (max-width: 1280px) {
-  .main__content {
-
   }
 }
 
