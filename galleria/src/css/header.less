@@ -173,6 +173,7 @@
         background-position: 0 -174px;
         opacity: 0;
         transition: opacity 0.8s;
+        visibility: hidden;
       }
       &-banner {
         margin-left: 72px;
@@ -181,15 +182,18 @@
         background-position: -299px -5px;
         opacity: 0;
         transition: opacity 0.8s;
+        visibility: hidden;
       }
       &.active {
         opacity: 1;
         height: 226px;
         .header-gnb-block-list {
           opacity: 1;
+          visibility: visible;
         }
         .header-gnb-block-banner {
           opacity: 1;
+          visibility: visible;
         }
       }
     }

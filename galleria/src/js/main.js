@@ -13,7 +13,6 @@ window.jQuery = $;
 
 (function() {
   AOS.init({
-    easing: 'ease-out-back',
     duration: 1200
   });
 
@@ -54,7 +53,7 @@ window.jQuery = $;
   // oneclick swiper
   const oneclickSwiper = new Swiper('.swiper-oneclick-layer.swiper-container', {
     on: {
-      init: function(){
+      init: function() {
         $('.slide-img-button0').addClass('show');
       },
       slideChange: function(swiper) {

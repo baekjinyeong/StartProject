@@ -10,215 +10,830 @@
   <title>Gelleria</title>
 </head>
 
-<body>
-  <div class="dimd"></div>
-  <header class="header">
-    @@include('_include/header.html')
-  </header>
-  
-  <main class="main">
-    <!-- main visual -->
-    <div class="main__visual">
-      <div class="swiper-main-visual swiper-container swiper-container-horizontal">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="slide-img">
-              <img src="@@webRoot/img/main-visual1.jpg" alt="Neon Dream FW18">
+  <body>
+    <div class="dimd"></div>
+    <header class="header">
+      @@include('_include/header.html')
+    </header>
+    
+    <main class="main">
+      <!-- main visual -->
+      <div class="main__visual">
+        <div class="swiper-main-visual swiper-container swiper-container-horizontal">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slide-img">
+                <img src="@@webRoot/img/main-visual1.jpg" alt="Neon Dream FW18">
+              </div>
+              <div class="slide-text">
+                <img src="@@webRoot/img/main-visual-text1.png" class="main-visual-title" data-swiper-parallax="-300" data-swiper-parallax-duration="2000" alt="">
+                <img src="@@webRoot/img/main-visual-text1-desc.png" class="main-visual-sub main-visual-sub0" alt="">
+              </div>
             </div>
-            <div class="slide-text">
-              <img src="@@webRoot/img/main-visual-text1.png" class="main-visual-title" data-swiper-parallax="-300" data-swiper-parallax-duration="2000" alt="">
-              <img src="@@webRoot/img/main-visual-text1-desc.png" class="main-visual-sub main-visual-sub0" alt="">
+            <div class="swiper-slide">
+              <div class="slide-img">
+                <img src="@@webRoot/img/main-visual2.jpg" alt="Neon Dream FW18">
+              </div>
+              <div class="slide-text">
+                <img src="@@webRoot/img/main-visual-text2.png" class="main-visual-title" data-swiper-parallax="-300" data-swiper-parallax-duration="2000" data-swiper-parallax-opacity="0.5" alt="">
+                <img src="@@webRoot/img/main-visual-text2-desc.png" class="main-visual-sub main-visual-sub1" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-img">
+                <img src="@@webRoot/img/main-visual3.jpg" alt="Neon Dream FW18">
+              </div>
+              <div class="slide-text">
+                <img src="@@webRoot/img/main-visual-text3.png" class="main-visual-title" data-swiper-parallax="-300" data-swiper-parallax-duration="2000" data-swiper-parallax-opacity="0.5" alt="">
+                <img src="@@webRoot/img/main-visual-text3-desc.png" class="main-visual-sub main-visual-sub2" alt="">
+              </div>
             </div>
           </div>
-          <div class="swiper-slide">
-            <div class="slide-img">
-              <img src="@@webRoot/img/main-visual2.jpg" alt="Neon Dream FW18">
-            </div>
-            <div class="slide-text">
-              <img src="@@webRoot/img/main-visual-text2.png" class="main-visual-title" data-swiper-parallax="-300" data-swiper-parallax-duration="2000" data-swiper-parallax-opacity="0.5" alt="">
-              <img src="@@webRoot/img/main-visual-text2-desc.png" class="main-visual-sub main-visual-sub1" alt="">
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="slide-img">
-              <img src="@@webRoot/img/main-visual3.jpg" alt="Neon Dream FW18">
-            </div>
-            <div class="slide-text">
-              <img src="@@webRoot/img/main-visual-text3.png" class="main-visual-title" data-swiper-parallax="-300" data-swiper-parallax-duration="2000" data-swiper-parallax-opacity="0.5" alt="">
-              <img src="@@webRoot/img/main-visual-text3-desc.png" class="main-visual-sub main-visual-sub2" alt="">
+          
+          <div class="swiper-pagination"></div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+
+        <!-- main oneclick -->
+        <div class="main-oneclick">
+          <button class="main-oneclick__button"><i class="sprite sprite-common sprite-common-oneclick"></i></button>
+          <div class="main-oneclick__layer">
+            <button class="oneclick-layer-close"><i class="sprite sprite-common sprite-common-close">레이어닫기</i></button>
+            <p class="main-oneclick-title"><img src="@@webRoot/img/main-oneclick-title.png" alt=""></p>
+            <div class="swiper-oneclick-layer swiper-container swiper-container-horizontal">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="slide-img">
+                    <img src="@@webRoot/img/main-oneclick-card1.png" alt="Neon Dream FW18">
+                    <img src="@@webRoot/img/main-oneclick-card1-btn.png" class="slide-img-button slide-img-button0" alt="">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slide-img">
+                    <img src="@@webRoot/img/main-oneclick-card2.png" alt="Neon Dream FW18">
+                    <img src="@@webRoot/img/main-oneclick-card2-btn.png" class="slide-img-button slide-img-button1" alt="">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slide-img">
+                    <img src="@@webRoot/img/main-oneclick-card3.png" alt="Neon Dream FW18">
+                    <img src="@@webRoot/img/main-oneclick-card3-btn.png" class="slide-img-button slide-img-button2" alt="">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slide-img">
+                    <img src="@@webRoot/img/main-oneclick-card4.png" alt="Neon Dream FW18">
+                    <img src="@@webRoot/img/main-oneclick-card4-btn.png" class="slide-img-button slide-img-button3" alt="">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slide-img">
+                    <img src="@@webRoot/img/main-oneclick-card5.png" alt="Neon Dream FW18">
+                    <img src="@@webRoot/img/main-oneclick-card5-btn.png" class="slide-img-button slide-img-button4" alt="">
+                  </div>
+                </div>
+              </div>
+              
+              <div class="swiper-pagination"></div>
+              <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
             </div>
           </div>
         </div>
-        
-        <div class="swiper-pagination"></div>
-        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        <!-- // main oneclick-->
       </div>
+      <!-- //main visual -->
 
-      <!-- main oneclick -->
-      <div class="main-oneclick">
-        <button class="main-oneclick__button"><i class="sprite sprite-common sprite-common-oneclick"></i></button>
-        <div class="main-oneclick__layer">
-          <button class="oneclick-layer-close"><i class="sprite sprite-common sprite-common-close">레이어닫기</i></button>
-          <p class="main-oneclick-title"><img src="@@webRoot/img/main-oneclick-title.png" alt=""></p>
-          <div class="swiper-oneclick-layer swiper-container swiper-container-horizontal">
+      <!-- main content -->
+      <div class="main__content">
+        
+        <!-- Event -->
+        <div class="section event">
+          <div class="swiper-main-event swiper-container swiper-container-horizontal">
             <div class="swiper-wrapper">
+              <!-- slide 1 -->
               <div class="swiper-slide">
-                <div class="slide-img">
-                  <img src="@@webRoot/img/main-oneclick-card1.png" alt="Neon Dream FW18">
-                  <img src="@@webRoot/img/main-oneclick-card1-btn.png" class="slide-img-button slide-img-button0" alt="">
+                <div class="swiper-event-main swiper-event-main0">
+                  <div class="swiper-event-text">
+                    <p class="swiper-event-title"><img src="@@webRoot/img/main-section1-slide1-title1.png" alt="바캉스 팝업 스토어"></p>
+                    <p class="swiper-event-description"><img src="@@webRoot/img/main-section1-slide1-desc1.png" alt="아직 한참이나 남은여름! 시원하게 떠나는 휴가의 순간을 기억하고 싶다면 인증샷은 필수! 인생샷을 만들어 줄 바캉스잇 아이템을 갤러리아 명품관 WEST 바캉스 팝업 스토어에서 만나보세요.  "></p>
+                  </div>
+                  <span class="swiper-event-image"><img src="@@webRoot/img/main-section1-slide1-image1.jpg" alt=""></span>    
+                </div>
+                <div class="swiper-event-sub swiper-event-sub0">
+                  <span class="swiper-event-image"><img src="@@webRoot/img/main-section1-slide1-image2.jpg" alt=""></span>
+                  <div class="swiper-event-text">
+                    <p class="swiper-event-title"><img src="@@webRoot/img/main-section1-slide1-title2.png" alt="바캉스 팝업 스토어"></p>
+                    <p class="swiper-event-description"><img src="@@webRoot/img/main-section1-slide1-desc2.png" alt="아직 한참이나 남은여름! 시원하게 떠나는 휴가의 순간을 기억하고 싶다면 인증샷은 필수! 인생샷을 만들어 줄 바캉스잇 아이템을 갤러리아 명품관 WEST 바캉스 팝업 스토어에서 만나보세요.  "></p>    
+                  </div>
                 </div>
               </div>
+              <!-- //slide 1 -->
+
+              <!-- slide 2 -->
               <div class="swiper-slide">
-                <div class="slide-img">
-                  <img src="@@webRoot/img/main-oneclick-card2.png" alt="Neon Dream FW18">
-                  <img src="@@webRoot/img/main-oneclick-card2-btn.png" class="slide-img-button slide-img-button1" alt="">
+                <div class="swiper-event-main swiper-event-main1">
+                  <div class="swiper-event-text">
+                    <p class="swiper-event-title"><img src="@@webRoot/img/main-section1-slide2-title1.png" alt="바캉스 팝업 스토어"></p>
+                    <p class="swiper-event-description"><img src="@@webRoot/img/main-section1-slide2-desc2.png" alt="아직 한참이나 남은여름! 시원하게 떠나는 휴가의 순간을 기억하고 싶다면 인증샷은 필수! 인생샷을 만들어 줄 바캉스잇 아이템을 갤러리아 명품관 WEST 바캉스 팝업 스토어에서 만나보세요.  "></p>
+                  </div>
+                    <span class="swiper-event-image"><img src="@@webRoot/img/main-section1-slide2-image1.jpg" alt=""></span>
+                </div>
+                <div class="swiper-event-sub swiper-event-sub1">
+                  <span class="swiper-event-image"><img src="@@webRoot/img/main-section1-slide2-image2.jpg" alt=""></span>
+                  <div class="swiper-event-text">
+                    <p class="swiper-event-title"><img src="@@webRoot/img/main-section1-slide2-title2.png" alt="바캉스 팝업 스토어"></p>
+                    <p class="swiper-event-description"><img src="@@webRoot/img/main-section1-slide2-desc2.png" alt="아직 한참이나 남은여름! 시원하게 떠나는 휴가의 순간을 기억하고 싶다면 인증샷은 필수! 인생샷을 만들어 줄 바캉스잇 아이템을 갤러리아 명품관 WEST 바캉스 팝업 스토어에서 만나보세요.  "></p>    
+                  </div>
                 </div>
               </div>
+              <!-- //slide 2 -->
+
+              <!-- slide 3 -->
               <div class="swiper-slide">
-                <div class="slide-img">
-                  <img src="@@webRoot/img/main-oneclick-card3.png" alt="Neon Dream FW18">
-                  <img src="@@webRoot/img/main-oneclick-card3-btn.png" class="slide-img-button slide-img-button2" alt="">
+                <div class="swiper-event-main swiper-event-main2">
+                  <div class="swiper-event-text">
+                    <p class="swiper-event-title swiper-event-title3"><img src="@@webRoot/img/main-section1-slide3-title1.png" alt="바캉스 팝업 스토어"></p>
+                    <p class="swiper-event-description swiper-event-description3"><img src="@@webRoot/img/main-section1-slide3-desc1.png" alt="아직 한참이나 남은여름! 시원하게 떠나는 휴가의 순간을 기억하고 싶다면 인증샷은 필수! 인생샷을 만들어 줄 바캉스잇 아이템을 갤러리아 명품관 WEST 바캉스 팝업 스토어에서 만나보세요."></p>
+                  </div>
+                  <span class="swiper-event-image"><img src="@@webRoot/img/main-section1-slide3-image1.jpg" alt=""></span>
+                </div>
+                <div class="swiper-event-sub swiper-event-sub2">
+                  <span class="swiper-event-image"><img src="@@webRoot/img/main-section1-slide3-image2.jpg" alt=""></span>
+                  <div class="swiper-event-text">
+                    <p class="swiper-event-title swiper-event-title3"><img src="@@webRoot/img/main-section1-slide3-title2.png" alt="바캉스 팝업 스토어"></p>
+                    <p class="swiper-event-description swiper-event-description3"><img src="@@webRoot/img/main-section1-slide3-desc2.png" alt="아직 한참이나 남은여름! 시원하게 떠나는 휴가의 순간을 기억하고 싶다면 인증샷은 필수! 인생샷을 만들어 줄 바캉스잇 아이템을 갤러리아 명품관 WEST 바캉스 팝업 스토어에서 만나보세요."></p>
+                  </div>
                 </div>
               </div>
+              <!-- //slide 3 -->
+
+              <!-- slide 4 -->
               <div class="swiper-slide">
-                <div class="slide-img">
-                  <img src="@@webRoot/img/main-oneclick-card4.png" alt="Neon Dream FW18">
-                  <img src="@@webRoot/img/main-oneclick-card4-btn.png" class="slide-img-button slide-img-button3" alt="">
+                <div class="swiper-event-main swiper-event-main3">
+                  <div class="swiper-event-text">
+                    <p class="swiper-event-title"><img src="@@webRoot/img/main-section1-slide1-title1.png" alt="바캉스 팝업 스토어"></p>
+                    <p class="swiper-event-description"><img src="@@webRoot/img/main-section1-slide1-desc1.png" alt="아직 한참이나 남은여름! 시원하게 떠나는 휴가의 순간을 기억하고 싶다면 인증샷은 필수! 인생샷을 만들어 줄 바캉스잇 아이템을 갤러리아 명품관 WEST 바캉스 팝업 스토어에서 만나보세요.  "></p>
+                  </div>
+                  <span class="swiper-event-image"><img src="@@webRoot/img/main-section1-slide1-image1.jpg" alt=""></span>
+                </div>
+                <div class="swiper-event-sub swiper-event-sub3">
+                  <span class="swiper-event-image"><img src="@@webRoot/img/main-section1-slide1-image2.jpg" alt=""></span>
+                  <div class="swiper-event-text">
+                    <p class="swiper-event-title"><img src="@@webRoot/img/main-section1-slide1-title2.png" alt="바캉스 팝업 스토어"></p>
+                    <p class="swiper-event-description"><img src="@@webRoot/img/main-section1-slide1-desc2.png" alt="아직 한참이나 남은여름! 시원하게 떠나는 휴가의 순간을 기억하고 싶다면 인증샷은 필수! 인생샷을 만들어 줄 바캉스잇 아이템을 갤러리아 명품관 WEST 바캉스 팝업 스토어에서 만나보세요.  "></p>    
+                  </div>
                 </div>
               </div>
-              <div class="swiper-slide">
-                <div class="slide-img">
-                  <img src="@@webRoot/img/main-oneclick-card5.png" alt="Neon Dream FW18">
-                  <img src="@@webRoot/img/main-oneclick-card5-btn.png" class="slide-img-button slide-img-button4" alt="">
+              <!-- //slide 4 -->
+            </div>
+          </div>
+            
+          <div class="swiper-pagination swiper-pagination-event"></div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+        <!-- //Event -->
+
+        <!-- Brand -->
+        <div class="section brand">
+          <div class="section-content-left">
+            <div class="section-title">
+              <h3 class="section-title__main">
+                <div class="word">
+                  <div class="letter">김</div>
+                  <div class="letter">리</div>
+                  <div class="letter">아</div>
+                  <div class="letter">님</div>
+                  <div class="letter">,</div>
                 </div>
+                <br>
+                <div class="word">
+                  <div class="letter">등</div>
+                  <div class="letter">록</div>
+                  <div class="letter">하</div>
+                  <div class="letter">신</div>
+                  <div class="letter">&nbsp;</div>
+                </div>
+                <div class="word">
+                  <div class="letter">선</div>
+                  <div class="letter">호</div>
+                  <div class="letter">&nbsp;</div>
+                  <div class="letter">지</div>
+                  <div class="letter">점</div>
+                  <div class="letter">&nbsp;</div>
+                </div>
+                <div class="word">
+                  <div class="letter">브</div>
+                  <div class="letter">랜</div>
+                  <div class="letter">드</div>
+                  <div class="letter">의</div>
+                </div>
+                <br>
+                <div class="word">
+                  <div class="letter">소</div>
+                  <div class="letter">식</div>
+                  <div class="letter">을</div>
+                  <div class="letter">&nbsp;</div>
+                </div>
+                <div class="word">
+                  <div class="letter">확</div>
+                  <div class="letter">인</div>
+                  <div class="letter">하</div>
+                  <div class="letter">세</div>
+                  <div class="letter">요</div>
+                  <div class="letter">.</div>
+                </div>
+              </h3>
+              <span class="section-title__description fadein"><img src="@@webRoot/img/brand-text2.png" alt=""></span>
+            </div>
+
+            <div class="brand-product">
+              <div class="brand-product-01">
+                <span class="section-product-image" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="500" data-aos-offset="0">
+                  <img src="@@webRoot/img/brand-img1.jpg" alt="" />
+                </span>
+                <p class="section-product-title">
+                  <img src="@@webRoot/img/brand-text4.png" alt="La prairie" />
+                </p>
+                <p class="section-product-description">
+                  <img src="@@webRoot/img/brand-text6.png" alt="건조한 계절이 오기전에 촉촉하게 준비하는 라프레리 신상 모이스쳐라이저" />
+                </p>
+              </div>
+
+              <div class="brand-product-search">
+                <img src="@@webRoot/img/brand-search.png" alt="다른 브랜드 찾기" />
+                <input type="text" class="input-brand-search" title="찾으실 다른 브랜드를 입력하세요." />
+                <button type="button" data-aos="fade-in" data-aos-easing="ease" data-aos-delay="1400">
+                  <img src="@@webRoot/img/icon-brand-search.png" alt="다른 브랜드 찾기 검색버튼" />
+                </button>
+                <span class="border-line"></span>
+                <img src="@@webRoot/img/brand-text3.png" alt="" />
+              </div>
+
+              <div class="brand-product-02">
+                <span class="section-product-image" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="500" data-aos-offset="0">
+                  <img src="@@webRoot/img/brand-img2.jpg" alt="" />
+                </span>
+                <span class="section-product-image section-product-image--bag" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="550" data-aos-offset="0">
+                  <img src="@@webRoot/img/brand-img3.png" alt="" />
+                </span>
+                <p class="section-product-title" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="600" data-aos-offset="0">
+                  <img src="@@webRoot/img/brand-text8.png" alt="GUCCI" />
+                </p>
+                <p class="section-product-description" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="650" data-aos-offset="0">
+                  <img src="@@webRoot/img/brand-text6.png" alt="매 시즌 새로운 컬러, 소재 및 영감이 된 디테일로 새롭게 선보이는 실비 디테일" />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="section-content-right">
+            <div class="brand-product">
+              <div class="brand-product-01">
+                <span class="section-product-image" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="500" data-aos-offset="0">
+                  <img src="@@webRoot/img/brand-img4.jpg" alt="" />
+                </span>
+                <p class="section-product-title"  data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="550" data-aos-offset="0">
+                  <img src="@@webRoot/img/brand-text5.png" alt="La prairie" />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //Brand -->
+
+        <!-- Gourmet -->
+        <div class="section gourmet">
+          <div class="section-content-left" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="800" data-aos-offset="0">
+            <img src="@@webRoot/img/gourmet-img1.jpg" />
+          </div>
+          <div class="section-content-right">
+            <span class="gourmet-image">
+              <img src="@@webRoot/img/gourmet-img2.jpg" />
+            </span>
+            
+            <div class="section-title">
+              <h3 class="section-title__main">
+                <div class="section-title__main-small">
+                  <div class="word">
+                    <div class="letter">시</div>
+                    <div class="letter">리</div>
+                    <div class="letter">즈</div>
+                    <div class="letter">L</div>
+                    <div class="letter">I</div>
+                    <div class="letter">F</div>
+                    <div class="letter">E</div>
+                  </div>
+                  <div class="word">
+                    <div class="letter">&nbsp;</div>
+                    <div class="letter">&amp;</div>
+                    <div class="letter">&nbsp;</div>
+                  </div>
+                  <div class="word">
+                    <div class="letter">G</div>
+                    <div class="letter">O</div>
+                    <div class="letter">U</div>
+                    <div class="letter">R</div>
+                    <div class="letter">M</div>
+                    <div class="letter">E</div>
+                    <div class="letter">T</div>
+                  </div>
+                </div>
+                <div class="word">
+                  <div class="letter">고</div>
+                  <div class="letter">메</div>
+                  <div class="letter">이</div>
+                </div>
+                <div class="word">
+                  <div class="letter">4</div>
+                  <div class="letter">9</div>
+                  <div class="letter">4</div>
+                  <div class="letter">에</div>
+                  <div class="letter">서</div>
+                </div>
+                <br>
+                <div class="word">
+                  <div class="letter">뭐</div>
+                  <div class="letter">&nbsp;</div>
+                  <div class="letter">먹</div>
+                  <div class="letter">지</div>
+                  <div class="letter">?</div>
+                  <div class="letter">!</div>
+                </div>
+              </h3>
+              <span class="section-title__description fadein"><img src="@@webRoot/img/gourmet-text1.png" alt=""></span>
+            </div>
+          </div>
+        </div>
+        <!-- //Gourmet -->
+
+        <!-- Wedding -->
+        <div class="section wedding">
+          <div class="section-content-left">
+            <div class="section-title">
+              <h3 class="section-title__main">
+                <div class="section-title__main-small">
+                  <div class="word">
+                    <div class="letter">W</div>
+                    <div class="letter">e</div>
+                    <div class="letter">d</div>
+                    <div class="letter">d</div>
+                    <div class="letter">i</div>
+                    <div class="letter">n</div>
+                    <div class="letter">g</div>
+                  </div>
+                  <div class="word">
+                    <div class="letter">&nbsp;</div>
+                  </div>
+                  <div class="word">
+                    <div class="letter">B</div>
+                    <div class="letter">o</div>
+                    <div class="letter">u</div>
+                    <div class="letter">t</div>
+                    <div class="letter">i</div>
+                    <div class="letter">q</div>
+                    <div class="letter">u</div>
+                    <div class="letter">e</div>
+                  </div>
+                </div>
+                <div class="word">
+                  <div class="letter">웨</div>
+                  <div class="letter">딩</div>
+                  <div class="letter">,</div>
+                  <div class="letter">&nbsp;</div>
+                </div>
+                <div class="word">
+                  <div class="letter">반</div>
+                  <div class="letter">짝</div>
+                  <div class="letter">이</div>
+                  <div class="letter">는</div>
+                  <div class="letter">&nbsp;</div>
+                </div>
+                <div class="word">
+                  <div class="letter">하</div>
+                  <div class="letter">루</div>
+                  <div class="letter">를</div>
+                </div>
+                <br>
+                <div class="word">
+                  <div class="letter">만</div>
+                  <div class="letter">들</div>
+                  <div class="letter">어</div>
+                  <div class="letter">&nbsp;</div>
+                </div>
+                <div class="word">
+                  <div class="letter">줄</div>
+                  <div class="letter">게</div>
+                  <div class="letter">요</div>
+                </div>
+              </h3>
+              <span class="section-title__description fadein"><img src="@@webRoot/img/wedding-text1.png" alt=""></span>
+            </div>
+
+            <div class="section-button-group">
+              <a href="#" class="button" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="500" data-aos-offset="0"><span>웨딩 마일리지 가입</span></a>
+              <a href="#" class="button" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="500" data-aos-offset="0"><span>더 플라자 바로가기</span></a>
+            </div>
+          </div>
+
+          <div class="section-content-right" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="500" data-aos-offset="0">
+            <img src="@@webRoot/img/wedding-img1.jpg" alt="" />
+          </div>
+          <div class="bg-image" data-aos="fade-up" data-aos-delay="500" data-aos-offset="1000">
+            <img src="@@webRoot/img/wedding-img2.png"  alt="" />
+          </div>
+        </div>
+        <!-- //Wedding -->
+
+        <!-- Card -->
+        <div class="section card">
+          <div class="section-product-image">
+            <img src="@@webRoot/img/card-img1.jpg" alt="" />
+          </div>
+          <div class="section-product-title">
+            <img src="@@webRoot/img/card-text1.png" alt="" />
+          </div>
+          <div class="section-product-description">
+            <img src="@@webRoot/img/card-text2.png" alt="" />
+          </div>
+        </div>
+        <!-- //Card -->
+
+        <!-- Culture -->
+        <div class="section culture">
+          <div class="section-title">
+            <h3 class="section-title__main">
+              <div class="section-title__main-small">
+                <div class="word">
+                  <div class="letter">문</div>
+                  <div class="letter">화</div>
+                  <div class="letter">센</div>
+                  <div class="letter">터</div>
+                </div>
+              </div>
+              <div class="word">
+                <div class="letter">직</div>
+                <div class="letter">장</div>
+                <div class="letter">인</div>
+                <div class="letter">을</div>
+                <div class="letter">&nbsp;</div>
+              </div>
+              <div class="word">
+                <div class="letter">위</div>
+                <div class="letter">한</div>
+                <div class="letter">&nbsp;</div>
+              </div>
+              <div class="word">
+                <div class="letter">푸</div>
+                <div class="letter">짐</div>
+                <div class="letter">한</div>
+              </div>
+              <br>
+              <div class="word">
+                <div class="letter">한</div>
+                <div class="letter">상</div>
+                <div class="letter">차</div>
+                <div class="letter">림</div>
+              </div>
+            </h3>
+          </div>
+          <div class="section-main-image">
+            <img src="@@webRoot/img/culture-img1.jpg" alt="" />
+          </div>
+          <div class="section-product-title">
+            <img src="@@webRoot/img/culture-text1.png" alt="" />
+          </div>
+          <div class="section-product-description">
+            <img src="@@webRoot/img/culture-text2.png" alt="" />
+          </div>
+
+          <div class="section-button-group">
+            <a href="#" class="button" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="500" data-aos-offset="0"><span>수강과목 안내</span></a>
+            <a href="#" class="button" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="500" data-aos-offset="0"><span>수강신청</span></a>
+          </div>
+        </div>
+        <!-- //Culture -->
+
+        <!-- New Arrival -->
+        <div class="section new-arrival">
+          <div class="section-product section-product--1">
+            <div class="section-product-title">
+              <h3 class="section-title__main">
+                <div class="word">
+                  <div class="letter">K</div>
+                  <div class="letter">E</div>
+                  <div class="letter">N</div>
+                  <div class="letter">Z</div>
+                  <div class="letter">O</div>
+                </div>
+                <div class="section-title__main-small">
+                  <div class="word">
+                    <div class="letter">L</div>
+                    <div class="letter">a</div>
+                    <div class="letter">r</div>
+                    <div class="letter">g</div>
+                    <div class="letter">e</div>
+                    <div class="letter">&nbsp;</div>
+                  </div>
+                  <div class="word">
+                    <div class="letter">N</div>
+                    <div class="letter">e</div>
+                    <div class="letter">o</div>
+                    <div class="letter">p</div>
+                    <div class="letter">r</div>
+                    <div class="letter">e</div>
+                    <div class="letter">n</div>
+                    <div class="letter">e</div>
+                  </div>
+                  <div class="word">
+                    <div class="letter">&nbsp;</div>
+                    <div class="letter">T</div>
+                    <div class="letter">i</div>
+                    <div class="letter">g</div>
+                    <div class="letter">e</div>
+                    <div class="letter">r</div>
+                    <div class="letter">&nbsp;</div>
+                  </div>
+                  <div class="word">
+                    <div class="letter">b</div>
+                    <div class="letter">a</div>
+                    <div class="letter">c</div>
+                    <div class="letter">k</div>
+                    <div class="letter">p</div>
+                    <div class="letter">a</div>
+                    <div class="letter">c</div>
+                    <div class="letter">k</div>
+                  </div>
+                </div>
+              </h3>
+
+              <div class="section-product-description" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="800" data-aos-offset="0">
+                <img src="@@webRoot/img/new-arrival-text1.png" alt="" />
+              </div>
+
+              <div class="section-product-price" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="1000" data-aos-offset="0">
+                <img src="@@webRoot/img/new-arrival-price1.png" alt="" />
               </div>
             </div>
             
-            <div class="swiper-pagination"></div>
-            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+            <div class="section-product-image">
+              <img src="@@webRoot/img/new-arrival-img1.png" alt="" />
+            </div>
+          </div>
+
+          <div class="section-product section-product--2">
+            <div class="section-product-title">
+              <h3 class="section-title__main">
+                <div class="word">
+                  <div class="letter">D</div>
+                  <div class="letter">A</div>
+                  <div class="letter">K</div>
+                  <div class="letter">S</div>
+                  <div class="letter">&nbsp;</div>
+                </div>
+                <div class="word">
+                  <div class="letter">S</div>
+                  <div class="letter">H</div>
+                  <div class="letter">O</div>
+                  <div class="letter">E</div>
+                  <div class="letter">S</div>
+                </div>
+                <div class="section-title__main-small">
+                  <div class="word">
+                    <div class="letter">남</div>
+                    <div class="letter">성</div>
+                    <div class="letter">&nbsp;</div>
+                  </div>
+                  <div class="word">
+                    <div class="letter">매</div>
+                    <div class="letter">쉬</div>
+                    <div class="letter">구</div>
+                    <div class="letter">두</div>
+                    <div class="letter">&nbsp;</div>
+                  </div>
+                  <div class="word">
+                    <div class="letter">D</div>
+                    <div class="letter">M</div>
+                    <div class="letter">D</div>
+                    <div class="letter">7</div>
+                    <div class="letter">5</div>
+                    <div class="letter">0</div>
+                  </div>
+                  <div class="word">
+                    <div class="letter">&nbsp;</div>
+                    <div class="letter">M</div>
+                    <div class="letter">T</div>
+                    <div class="letter">-</div>
+                    <div class="letter">3</div>
+                    <div class="letter">0</div>
+                    <div class="letter">&nbsp;</div>
+                  </div>
+                </div>
+              </h3>
+
+              <div class="section-product-description" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="800" data-aos-offset="0">
+                <img src="@@webRoot/img/new-arrival-text2.png" alt="" />
+              </div>
+
+              <div class="section-product-price" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="1000" data-aos-offset="0">
+                <img src="@@webRoot/img/new-arrival-price2.png" alt="" />
+              </div>
+            </div>
+            
+            <div class="section-product-image">
+              <img src="@@webRoot/img/new-arrival-img2.png" alt="" />
+            </div>
+          </div>
+
+          <div class="section-product section-product--3">
+            <div class="section-product-title">
+              <h3 class="section-title__main">
+                <div class="word">
+                  <div class="letter">G</div>
+                  <div class="letter">U</div>
+                  <div class="letter">C</div>
+                  <div class="letter">C</div>
+                  <div class="letter">I</div>
+                </div>
+                <div class="section-title__main-small">
+                  <div class="word">
+                    <div class="letter">L</div>
+                    <div class="letter">a</div>
+                    <div class="letter">r</div>
+                    <div class="letter">g</div>
+                    <div class="letter">e</div>
+                    <div class="letter">&nbsp;</div>
+                  </div>
+                  <div class="word">
+                    <div class="letter">N</div>
+                    <div class="letter">e</div>
+                    <div class="letter">o</div>
+                    <div class="letter">p</div>
+                    <div class="letter">r</div>
+                    <div class="letter">e</div>
+                    <div class="letter">n</div>
+                    <div class="letter">e</div>
+                  </div>
+                  <div class="word">
+                    <div class="letter">&nbsp;</div>
+                    <div class="letter">T</div>
+                    <div class="letter">i</div>
+                    <div class="letter">g</div>
+                    <div class="letter">e</div>
+                    <div class="letter">r</div>
+                    <div class="letter">&nbsp;</div>
+                  </div>
+                  <div class="word">
+                    <div class="letter">b</div>
+                    <div class="letter">a</div>
+                    <div class="letter">c</div>
+                    <div class="letter">k</div>
+                    <div class="letter">p</div>
+                    <div class="letter">a</div>
+                    <div class="letter">c</div>
+                    <div class="letter">k</div>
+                  </div>
+                </div>
+              </h3>
+
+              <div class="section-product-description" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="800" data-aos-offset="0">
+                <img src="@@webRoot/img/new-arrival-text2.png" alt="" />
+              </div>
+
+              <div class="section-product-price" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="1000" data-aos-offset="0">
+                <img src="@@webRoot/img/new-arrival-price2.png" alt="" />
+              </div>
+            </div>
+            
+            <div class="section-product-image">
+              <img src="@@webRoot/img/new-arrival-img3.png" alt="" />
+            </div>
           </div>
         </div>
-      </div>
-      <!-- // main oneclick-->
-    </div>
-    <!-- //main visual -->
+        <!-- //New Arrival -->
 
-    <!-- main content -->
-    <div class="main__content">
-      
-      <!-- Event -->
-      <div class="event">
-        <div class="swiper-main-event swiper-container swiper-container-horizontal">
-          <div class="swiper-wrapper">
-            <!-- slide 1 -->
-            <div class="swiper-slide">
-              <div class="swiper-event-main swiper-event-main0">
-                <div class="swiper-event-text">
-                  <p class="swiper-event-title"><img src="@@webRoot/img/main-section1-slide1-title1.png" alt="바캉스 팝업 스토어"></p>
-                  <p class="swiper-event-description"><img src="@@webRoot/img/main-section1-slide1-desc1.png" alt="아직 한참이나 남은여름! 시원하게 떠나는 휴가의 순간을 기억하고 싶다면 인증샷은 필수! 인생샷을 만들어 줄 바캉스잇 아이템을 갤러리아 명품관 WEST 바캉스 팝업 스토어에서 만나보세요.  "></p>
+        <!-- Style -->
+        <div class="section style-magazine">
+          <div class="section-content-left" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="800" data-aos-offset="0">
+            <div class="section-product-title">
+              <h3 class="section-title__main">
+                <div class="section-title__main-small">
+                  <div class="word">
+                    <div class="letter">A</div>
+                    <div class="letter">C</div>
+                    <div class="letter">C</div>
+                    <div class="letter">E</div>
+                    <div class="letter">S</div>
+                    <div class="letter">S</div>
+                  </div>
+                  <div class="word">
+                    <div class="letter">O</div>
+                    <div class="letter">R</div>
+                    <div class="letter">I</div>
+                    <div class="letter">E</div>
+                    <div class="letter">S</div>
+                  </div>
                 </div>
-                <span class="swiper-event-image"><img src="@@webRoot/img/main-section1-slide1-image1.jpg" alt=""></span>    
-              </div>
-              <div class="swiper-event-sub swiper-event-sub0">
-                <span class="swiper-event-image"><img src="@@webRoot/img/main-section1-slide1-image2.jpg" alt=""></span>
-                <div class="swiper-event-text">
-                  <p class="swiper-event-title"><img src="@@webRoot/img/main-section1-slide1-title2.png" alt="바캉스 팝업 스토어"></p>
-                  <p class="swiper-event-description"><img src="@@webRoot/img/main-section1-slide1-desc2.png" alt="아직 한참이나 남은여름! 시원하게 떠나는 휴가의 순간을 기억하고 싶다면 인증샷은 필수! 인생샷을 만들어 줄 바캉스잇 아이템을 갤러리아 명품관 WEST 바캉스 팝업 스토어에서 만나보세요.  "></p>    
+                <div class="word">
+                  <div class="letter">I</div>
+                  <div class="letter">T</div>
+                  <div class="letter">'</div>
+                  <div class="letter">S</div>
+                  <div class="letter">&nbsp;</div>
                 </div>
+                <div class="word">
+                  <div class="letter">D</div>
+                  <div class="letter">I</div>
+                  <div class="letter">O</div>
+                  <div class="letter">R</div>
+                  <div class="letter">,</div>
+                </div>
+                <br>
+                <div class="word">
+                  <div class="letter">I</div>
+                  <div class="letter">T</div>
+                  <div class="letter">'</div>
+                  <div class="letter">S</div>
+                  <div class="letter">&nbsp;</div>
+                </div>
+                <div class="word">
+                  <div class="letter">G</div>
+                  <div class="letter">O</div>
+                  <div class="letter">R</div>
+                  <div class="letter">G</div>
+                  <div class="letter">E</div>
+                  <div class="letter">O</div>
+                  <div class="letter">U</div>
+                  <div class="letter">S</div>
+                </div>
+              </h3>
+
+              <div class="section-product-description" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="800" data-aos-offset="0">
+                <img src="@@webRoot/img/new-arrival-text2.png" alt="" />
               </div>
             </div>
-            <!-- //slide 1 -->
+            
+            <div class="section-product-image">
+              <img src="@@webRoot/img/magazine-img1.jpg" alt="" />
+            </div>
+          </div>
+          <div class="section-content-right">
+            <div class="section-product-title">
+              <h3 class="section-title__main">
+                <div class="section-title__main-small">
+                  <div class="word">
+                    <div class="letter">B</div>
+                    <div class="letter">E</div>
+                    <div class="letter">A</div>
+                    <div class="letter">U</div>
+                    <div class="letter">T</div>
+                    <div class="letter">Y</div>
+                  </div>
+                </div>
+                <div class="word">
+                  <div class="letter">항</div>
+                  <div class="letter">산</div>
+                  <div class="letter">화</div>
+                  <div class="letter">&nbsp;</div>
+                </div>
+                <div class="word">
+                  <div class="letter">안</div>
+                  <div class="letter">티</div>
+                  <div class="letter">에</div>
+                  <div class="letter">이</div>
+                  <div class="letter">징</div>
+                  <div class="letter">은</div>
+                </div>
+                <br>
+                <div class="word">
+                  <div class="letter">모</div>
+                  <div class="letter">트</div>
+                  <div class="letter">앤</div>
+                  <div class="letter">베</div>
+                  <div class="letter">일</div>
+                  <div class="letter">리</div>
+                </div>
+              </h3>
 
-            <!-- slide 2 -->
-            <div class="swiper-slide">
-              <div class="swiper-event-main swiper-event-main1">
-                <div class="swiper-event-text">
-                  <p class="swiper-event-title"><img src="@@webRoot/img/main-section1-slide2-title1.png" alt="바캉스 팝업 스토어"></p>
-                  <p class="swiper-event-description"><img src="@@webRoot/img/main-section1-slide2-desc2.png" alt="아직 한참이나 남은여름! 시원하게 떠나는 휴가의 순간을 기억하고 싶다면 인증샷은 필수! 인생샷을 만들어 줄 바캉스잇 아이템을 갤러리아 명품관 WEST 바캉스 팝업 스토어에서 만나보세요.  "></p>
-                </div>
-                  <span class="swiper-event-image"><img src="@@webRoot/img/main-section1-slide2-image1.jpg" alt=""></span>
-              </div>
-              <div class="swiper-event-sub swiper-event-sub1">
-                <span class="swiper-event-image"><img src="@@webRoot/img/main-section1-slide2-image2.jpg" alt=""></span>
-                <div class="swiper-event-text">
-                  <p class="swiper-event-title"><img src="@@webRoot/img/main-section1-slide2-title2.png" alt="바캉스 팝업 스토어"></p>
-                  <p class="swiper-event-description"><img src="@@webRoot/img/main-section1-slide2-desc2.png" alt="아직 한참이나 남은여름! 시원하게 떠나는 휴가의 순간을 기억하고 싶다면 인증샷은 필수! 인생샷을 만들어 줄 바캉스잇 아이템을 갤러리아 명품관 WEST 바캉스 팝업 스토어에서 만나보세요.  "></p>    
-                </div>
+              <div class="section-product-description" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="800" data-aos-offset="0">
+                <img src="@@webRoot/img/new-arrival-text2.png" alt="" />
               </div>
             </div>
-            <!-- //slide 2 -->
-
-            <!-- slide 3 -->
-            <div class="swiper-slide">
-              <div class="swiper-event-main swiper-event-main2">
-                <div class="swiper-event-text">
-                  <p class="swiper-event-title swiper-event-title3"><img src="@@webRoot/img/main-section1-slide3-title1.png" alt="바캉스 팝업 스토어"></p>
-                  <p class="swiper-event-description swiper-event-description3"><img src="@@webRoot/img/main-section1-slide3-desc1.png" alt="아직 한참이나 남은여름! 시원하게 떠나는 휴가의 순간을 기억하고 싶다면 인증샷은 필수! 인생샷을 만들어 줄 바캉스잇 아이템을 갤러리아 명품관 WEST 바캉스 팝업 스토어에서 만나보세요."></p>
-                </div>
-                <span class="swiper-event-image"><img src="@@webRoot/img/main-section1-slide3-image1.jpg" alt=""></span>
-              </div>
-              <div class="swiper-event-sub swiper-event-sub2">
-                <span class="swiper-event-image"><img src="@@webRoot/img/main-section1-slide3-image2.jpg" alt=""></span>
-                <div class="swiper-event-text">
-                  <p class="swiper-event-title swiper-event-title3"><img src="@@webRoot/img/main-section1-slide3-title2.png" alt="바캉스 팝업 스토어"></p>
-                  <p class="swiper-event-description swiper-event-description3"><img src="@@webRoot/img/main-section1-slide3-desc2.png" alt="아직 한참이나 남은여름! 시원하게 떠나는 휴가의 순간을 기억하고 싶다면 인증샷은 필수! 인생샷을 만들어 줄 바캉스잇 아이템을 갤러리아 명품관 WEST 바캉스 팝업 스토어에서 만나보세요."></p>
-                </div>
-              </div>
+            
+            <div class="section-product-image">
+              <img src="@@webRoot/img/magazine-img2.jpg" alt="" />
             </div>
-            <!-- //slide 3 -->
-
-            <!-- slide 4 -->
-            <div class="swiper-slide">
-              <div class="swiper-event-main swiper-event-main3">
-                <div class="swiper-event-text">
-                  <p class="swiper-event-title"><img src="@@webRoot/img/main-section1-slide1-title1.png" alt="바캉스 팝업 스토어"></p>
-                  <p class="swiper-event-description"><img src="@@webRoot/img/main-section1-slide1-desc1.png" alt="아직 한참이나 남은여름! 시원하게 떠나는 휴가의 순간을 기억하고 싶다면 인증샷은 필수! 인생샷을 만들어 줄 바캉스잇 아이템을 갤러리아 명품관 WEST 바캉스 팝업 스토어에서 만나보세요.  "></p>
-                </div>
-                <span class="swiper-event-image"><img src="@@webRoot/img/main-section1-slide1-image1.jpg" alt=""></span>    
-              </div>
-              <div class="swiper-event-sub swiper-event-sub3">
-                <span class="swiper-event-image"><img src="@@webRoot/img/main-section1-slide1-image2.jpg" alt=""></span>
-                <div class="swiper-event-text">
-                  <p class="swiper-event-title"><img src="@@webRoot/img/main-section1-slide1-title2.png" alt="바캉스 팝업 스토어"></p>
-                  <p class="swiper-event-description"><img src="@@webRoot/img/main-section1-slide1-desc2.png" alt="아직 한참이나 남은여름! 시원하게 떠나는 휴가의 순간을 기억하고 싶다면 인증샷은 필수! 인생샷을 만들어 줄 바캉스잇 아이템을 갤러리아 명품관 WEST 바캉스 팝업 스토어에서 만나보세요.  "></p>    
-                </div>
-              </div>
-            </div>
-            <!-- //slide 4 -->
           </div>
         </div>
-          
-        <div class="swiper-pagination swiper-pagination-event"></div>
-        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        <!-- //Style -->
+
       </div>
-      <!-- //Event -->
+      <!-- //main content -->
+    </main>
 
-      <!-- My Brand -->
-      <!-- //My Brand -->
-
-      <!-- Gourmet -->
-      <!-- //Gourmet -->
-
-      <!-- Wedding -->
-      <!-- //Wedding -->
-
-      <!-- Card -->
-      <!-- //Card -->
-
-      <!-- Culture -->
-      <!-- //Culture -->
-
-      <!-- New Arrival -->
-      <!-- //New Arrival -->
-
-      <!-- Style -->
-      <!-- //Style -->
-
+    <div class="footer">
+      <img src="@@webRoot/img/img-footer.gif" alt="" />
     </div>
-    <!-- //main content -->
-  </main>
 
-  
-  <script src="@@webRoot/js/main.js"></script>
-</body>
+    
+    <script src="@@webRoot/js/main.js"></script>
+  </body>
 </html>

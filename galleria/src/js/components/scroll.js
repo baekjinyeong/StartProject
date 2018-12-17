@@ -23,5 +23,41 @@ export default function scroll() {
         $(this).removeClass('image-effect');
       }
     });
+
+    $('h3').each(function() {
+      var elPosition = $(this).offset().top;
+      if (scrollY > elPosition - windowH) {
+        $(this).addClass('show');
+      } else {
+        $(this).removeClass('show');
+      }
+    });
+
+    $('.section-title span').each(function() {
+      var elPosition = $(this).offset().top;
+      if (scrollY > elPosition - windowH) {
+        $(this).addClass('show');
+      } else {
+        $(this).removeClass('show');
+      }
+    });
+
+    $('.brand-product-search span').each(function() {
+      var elPosition = $(this).offset().top;
+      if (scrollY > elPosition - windowH) {
+        $(this).addClass('show');
+      } else {
+        $(this).removeClass('show');
+      }
+    });
+
+    $('div.section-product').each(function() {
+      var elPosition = $(this).offset().top;
+      if (scrollY > elPosition - windowH) {
+        $(this).addClass('show');
+      } else {
+        $(this).removeClass('show');
+      }
+    });
   });
 }

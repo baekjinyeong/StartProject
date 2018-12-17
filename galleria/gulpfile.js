@@ -115,7 +115,6 @@ gulp.task('sprite:icon', function() {
   return merge(imgStream, cssStream);
 });
 
-
 // Image Sprites
 gulp.task('sprites', ['sprite:icon']);
 
